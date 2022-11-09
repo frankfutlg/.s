@@ -1,0 +1,56 @@
+! xft behavior
+Xft.antialias:	false
+Xft.hinting:	true
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+Xcursor.theme:  Cutefish-light
+Xft.dpi: 96
+
+! window padding
+st.borderpx: 16
+
+! terminal
+st.font:           cherry:style:Regular:size=11:antialias=true:autohint=true
+
+!!!!!!!!!!!!!!!!!
+!! colorscheme !!
+!!!!!!!!!!!!!!!!!
+
+! special
+*.background:   #f2f7fa
+*.foreground:   #0f1417
+*.cursorColor:  #e0ddf0
+
+! black
+*.color0:       #e9eff2
+*.color8:       #dfe6eb
+
+! red
+*.color1:       #b83f33
+*.color9:       #bf4539
+
+! green
+*.color2:       #03a32b
+*.color10:      #07ab30
+
+! yellow
+*.color3:       #d19330
+*.color11:      #d99a36
+
+! blue
+*.color4:       #5378c4
+*.color12:      #5a80cc
+
+! magenta
+*.color5:       #7f59b5
+*.color13:      #8760bd
+
+! cyan
+*.color6:       #49b0ba
+*.color14:      #4fb8c2
+
+! white
+*.color7:       #0f1417
+*.color15:      #141b1f

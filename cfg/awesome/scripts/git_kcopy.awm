@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILE_LOC="$HOME/.git_key"
+
+printf "$(cat $FILE_LOC)" | xclip -sel c && \
+for i in $(seq "5" -1 1); do
+	notify-send -t 1000 "Your git key was copied!" "Uncopying your git key in $i..."
+	beep -f 500 -l 150
+	sleep 1
+done && xclip -sel clip < /dev/null && notify-send -u low "Your git key was uncopied." "Just for safety measures, you know."

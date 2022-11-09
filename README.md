@@ -1,0 +1,3 @@
+WIP...
+
+BTW, some of the code you see here was taken from various places on the internet, but don't worry, i'll make sure to give credit for everyone when i finish my README.md

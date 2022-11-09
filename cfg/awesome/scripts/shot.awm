@@ -1,0 +1,45 @@
+#!/bin/sh
+
+DIR="${XDG_PICTURES_DIR}/ss"
+FILELOC="$DIR/shot-$(date +%s).png"
+ACTIVEWINDOW="$(xdotool getactivewindow)"
+
+notifys() {
+	if [[ -e $FILELOC ]]; then
+		notify-send -i "Screenshot!" "Saved and copied to clipboard."
+		beep -f 500 -l 150
+	else
+		notify-send -i "Uh oh..." "Something went wrong."
+		beep -f 375 -l 200
+	fi
+}
+
+full() {
+	maim -u -f png | tee "$FILELOC" | xclip -sel c -t image/png
+	notifys
+}
+
+selection() {
+	local bytes
+	bytes="$(maim -u -f png -s -b 4 | base64)"
+
+	if [ "$bytes" ]; then
+		echo "$bytes" | base64 -d | tee "$FILELOC" | xclip -sel c -t image/png
+		notifys
+	else
+		notify-send "Uh oh..." "Something went wrong."
+		beep -f 375 -l 200
+	fi
+}
+
+window() {
+	maim -u -f png -i "$ACTIVEWINDOW" | tee "$FILELOC" | xclip -sel c -t image/png
+	notifys
+}
+
+case $1 in
+	-f) full ;;
+	-s) selection ;;
+	-w) window ;;
+	*) echo -e "\e[0;31mInvalid option.\e[0m" && exit 1 ;;
+esac

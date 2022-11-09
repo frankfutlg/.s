@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# I know, i know... This script is HORRIFIC, because when i made this script, i wasn't good at shell scripting at all (and i'm still not very good, but i could at least try to re-make this script).
+# I don't plan on re-making this script, and i won't tell why (lazyness).
+
+_mount() {
+	for usblink in /dev/disk/by-id/usb-*-part?; do
+		local usbdrive="$(readlink -f $usblink)"
+		local usbdrive_less=${usbdrive##*/}
+		local mountdir="/mnt/_$usbdrive_less"
+		local ismounted="$(grep $usbdrive /proc/mounts)"
+		local usbsize="$(grep $usbdrive_less /proc/partitions \
+		| awk '{print $3/1048576}' \
+		| sed 's/[.].*$//')"
+
+		if [[ ! $ismounted ]]; then
+			[[ $usbsize -ge 7 ]] && mkdir -p $mountdir \
+			&& mount $usbdrive $mountdir && printf "%s\n" "Mounted $usbdrive at $mountdir."
+		else
+			echo "$usbdrive is already mounted!!!"
+		fi
+	done
+}
+
+_umount() { 
+	for usblink in /dev/disk/by-id/usb-*-part?; do
+		local usbdrive="$(readlink -f $usblink)"
+                local usbdrive_less=${usbdrive##*/}
+		local mountdir="/mnt/_$usbdrive_less"
+		local mounted="$(grep -o $usbdrive /proc/mounts)"
+
+		sync
+		[[ $mounted ]] && umount $usbdrive \
+		&& rm -rf $mountdir && echo "Done umounting $mountdir." || echo "Not mounted." && exit 1
+	done
+}
+
+_isroot() { 
+	[ $EUID -eq 0 ] && return 0 || exit 1
+}
+                                                                                                  
+case $1 in
+	mount) _isroot && _mount ;;
+	umount) _isroot && _umount ;;
+	*) echo "Invalid option." ;;
+esac

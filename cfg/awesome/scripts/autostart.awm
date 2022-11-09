@@ -1,0 +1,10 @@
+#!/bin/bash
+
+declare -a programs=("picom")
+
+for app in "${programs[@]}"; do
+	isopen="${app%% *}"
+	pgrep -x "$isopen" | xargs kill >/dev/null 2>&1
+	sleep 0.3
+	eval "$app &"
+done
