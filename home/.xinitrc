@@ -18,6 +18,7 @@ export XDG_PICTURES_DIR="$HOME/pix"
 export XDG_VIDEOS_DIR="$HOME/vids"
 
 xrdb -merge $HOME/.Xresources
+xset b off
 setxkbmap -layout br
 xset r rate 250 60 
 

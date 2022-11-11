@@ -21,16 +21,16 @@ client.connect_signal("request::titlebars", function(c)
 		widget = wibox.widget.imagebox
 	}
 
-	awful.titlebar(c, { position = 'left', size = dpi(35) } ).widget = {
+	awful.titlebar(c, { position = 'left', size = dpi(27) } ).widget = {
 		expand = "none",
 		layout = wibox.layout.align.vertical,
 			{ -- Top
 				{
 					awful.titlebar.widget.floatingbutton(c),
 					widget = wibox.container.margin,
-					top = dpi(10),
+					top = dpi(2),
 					right = dpi(10),
-					left = dpi(10)
+					left = dpi(2)
 				},
 				layout  = wibox.layout.fixed.vertical
 			},
@@ -39,9 +39,9 @@ client.connect_signal("request::titlebars", function(c)
 				{
 					awful.titlebar.widget.closebutton(c),
 					widget = wibox.container.margin,
-					bottom = dpi(10),
+					bottom = dpi(2),
 					right = dpi(10),
-					left = dpi(10)
+					left = dpi(2)
 				},
 				layout = wibox.layout.fixed.vertical
 			},

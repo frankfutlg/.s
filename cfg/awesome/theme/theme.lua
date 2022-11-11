@@ -30,17 +30,17 @@ local theme = {}
 	theme.cyan = def.color.cyan
 
 	theme.useless_gap = dpi(8)
-	theme.border_width = dpi(0)
+	theme.border_width = dpi(8)
+
+	theme.border_color_normal = def.color.bg_1
+	theme.border_color_active = def.color.bg_1
+	theme.border_color_marked = def.color.bg_1
 
 	theme.titlebar_bg_normal = def.color.bg_1
 	theme.titlebar_bg_focus  = def.color.bg_1
-	theme.titlebar_bg_urgent = def.color.bg_1
-	theme.titlebar_bg_minimize = def.color.bg_1
 
 	theme.titlebar_fg_normal = def.color.bg_1
 	theme.titlebar_fg_focus  = def.color.fg
-	theme.titlebar_fg_urgent = def.color.bg_1
-	theme.titlebar_fg_minimize = def.color.bg_1
 
 	theme.titlebar_floating_button_normal_inactive = recolor(icons_path.."floating_inactive.png", def.color.bg_1)
 	theme.titlebar_floating_button_focus_inactive  = recolor(icons_path.."floating_inactive.png", def.color.fg)
