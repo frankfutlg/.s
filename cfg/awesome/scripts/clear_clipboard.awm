@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xclip -sel c < /dev/null; notify-send -u low -t 200 "Clipboard" "The clipboard has been cleared."
+xclip -sel c < /dev/null; notify-send -u low -t 1250 "Clipboard" "The clipboard has been cleared."

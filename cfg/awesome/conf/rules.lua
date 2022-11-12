@@ -51,18 +51,18 @@ ruled.notification.connect_signal('request::rules', function()
 	-- Critical
     ruled.notification.append_rule {
         rule       = { urgency = 'critical' },
-        properties = { bg = beautiful.bg, fg = beautiful.red, timeout = 7 }
+        properties = { bg = beautiful.bg, fg = beautiful.red, implicit_timeout = 7 }
     }
 
 	-- Normal
     ruled.notification.append_rule {
         rule       = { urgency = 'normal' },
-        properties = { bg = beautiful.bg, fg = beautiful.fg, timeout = 5 }
+        properties = { bg = beautiful.bg, fg = beautiful.fg, implicit_timeout = 5 }
     }
 
 	-- Low
     ruled.notification.append_rule {
         rule       = { urgency = 'low' },
-        properties = { bg = beautiful.bg, fg = beautiful.fg, timeout = 3 }
+        properties = { bg = beautiful.bg, fg = beautiful.fg, implicit_timeout = 3 }
     }
 end)
