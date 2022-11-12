@@ -18,5 +18,6 @@ return {
 		shot_client = script_dir .. "shot.awm -w",
 
 		git_kcopy = script_dir.."git_kcopy.awm",
+		cclear = script_dir.."clear_clipboard.awm" 
 	},
 }

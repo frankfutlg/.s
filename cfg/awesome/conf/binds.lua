@@ -57,6 +57,12 @@ awful.keyboard.append_global_keybindings({
 	),
 
 	awful.key(
+		{ super, alt }, "c", function()
+			awful.spawn.with_shell(def.script.cclear)
+		end
+	),
+
+	awful.key(
 		{ }, "XF86AudioRaiseVolume", function()
 			awful.spawn.with_shell("pamixer -i 5")
 		end
