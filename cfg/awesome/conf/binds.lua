@@ -194,13 +194,6 @@ client.connect_signal("request::default_keybindings", function()
 		),
 	
 		awful.key(
-			{ super }, "m", function(c)
-				c.maximized = not c.maximized
-				c:raise()
-			end
-		),
-
-		awful.key(
 			{ super }, "q", function(c)
 				c:kill()
 			end

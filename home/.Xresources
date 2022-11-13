@@ -12,7 +12,7 @@ Xft.dpi: 96
 st.borderpx: 16
 
 ! terminal
-st.font:           cherry:style:Regular:size=11:antialias=true:autohint=true
+st.font:           cherry:size=11:antialias=true:autohint=true
 
 !!!!!!!!!!!!!!!!!
 !! colorscheme !!

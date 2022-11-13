@@ -25,7 +25,7 @@ return {
 	},
 
 	var = {
-		font = "cherry 9",
+		font = "Cozette 11",
 		wall = gears.surface.load_uncached(themes_path.."assets/wall.jpg")
 	},
 }
