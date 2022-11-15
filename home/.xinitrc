@@ -25,7 +25,7 @@ xset r rate 250 60
 initx() {
 	export XDG_CURRENT_DESKTOP="awesome"
 	export WINDOW_MANAGER="awesome"
-	exec awesome
+	exec dbus-run-session awesome
 }
 
 if [ "$PWD" = "$HOME" ]; then
