@@ -23,7 +23,7 @@ awful.keyboard.append_global_keybindings({
 
 	awful.key(
 		{ super }, "y", function()
-			awful.spawn(def.app.term .. " -e ytfzf -t -T ueberzug -l")
+			awful.spawn("ytfzf -D -l")
 		end),
 
 	awful.key(
