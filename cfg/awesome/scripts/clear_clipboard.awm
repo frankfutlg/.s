@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xclip -sel c < /dev/null; \
+       	sudo beep -f 450 -l 200; \ 
+	notify-send -u low -t 1250 "Clipboard" "The clipboard has been cleared."
