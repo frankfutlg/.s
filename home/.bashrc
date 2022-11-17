@@ -3,7 +3,7 @@
 
 PS1='[\w] '
 
-alias ytmp3='yt-dlp --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias ytmp3='yt-dlp -x --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --prefer-ffmpeg -o "%(title)s.%(ext)s"'
 alias ytmp4='yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s"'
 alias makestall="doas make clean install"
 alias mv="mv -v"
@@ -27,6 +27,8 @@ export VISUAL="vim"
 export EDITOR="vim"
 
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+[ -d "/usr/sbin" ] && export PATH="/usr/sbin:$PATH"
+[ -d "/sbin" ] && export PATH="/sbin:$PATH"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -186,6 +186,13 @@ client.connect_signal("request::default_keybindings", function()
             		end
 		),
 
+        	awful.key(
+			{ super }, "m", function(c)
+                		c.maximized = not c.maximized
+                		c:raise()
+            		end
+		),
+
 		awful.key(
 			{ super }, "space", function(c)
 				c.floating = not c.floating
