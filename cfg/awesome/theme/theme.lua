@@ -65,9 +65,9 @@ local theme = {}
 
 	theme.notification_spacing = dpi(8)
 
---	theme.parent_filter_list = {"firefox", "Gimp"}
---	theme.child_filter_list = { "Dragon" } 
---	theme.swallowing_filter = true        
+	theme.parent_filter_list = {"firefox", "Gimp"}
+	theme.child_filter_list = { "Dragon" } 
+	theme.swallowing_filter = true        
 
 	theme.tooltip_opacity = 0
 	theme.icon_theme = nil

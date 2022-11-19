@@ -23,8 +23,8 @@ st.font:           cherry:size=11
 *.cursorColor:  #e0ddf0
 
 ! black
-*.color0:       #e9eff2
-*.color8:       #dfe6eb
+*.color0:       #0f1417
+*.color8:       #141b1f
 
 ! red
 *.color1:       #b83f33
@@ -51,5 +51,5 @@ st.font:           cherry:size=11
 *.color14:      #4fb8c2
 
 ! white
-*.color7:       #0f1417
-*.color15:      #141b1f
+*.color7:       #e9eff2
+*.color15:      #dfe6eb
