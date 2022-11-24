@@ -43,25 +43,25 @@ local theme = {}
 	theme.titlebar_fg_focus  = def.color.fg
 
 	theme.titlebar_floating_button_normal_inactive = recolor(icons_path.."floating_inactive.png", def.color.bg_1)
-	theme.titlebar_floating_button_focus_inactive  = recolor(icons_path.."floating_inactive.png", def.color.fg)
+	theme.titlebar_floating_button_focus_inactive  = recolor(icons_path.."floating_inactive.png", def.color.blue)
 
 	theme.titlebar_floating_button_normal_active = recolor(icons_path.."floating_active.png", def.color.bg_1)
-	theme.titlebar_floating_button_focus_active  = recolor(icons_path.."floating_active.png", def.color.fg_2)
+	theme.titlebar_floating_button_focus_active  = recolor(icons_path.."floating_active.png", def.color.blue)
 
-	theme.titlebar_floating_button_focus_inactive_hover = recolor(icons_path.."floating_inactive.png", def.color.fg_2)
-	theme.titlebar_floating_button_focus_active_hover = recolor(icons_path.."floating_active.png", def.color.fg)
+	theme.titlebar_floating_button_focus_inactive_hover = recolor(icons_path.."floating_inactive.png", def.color.cyan)
+	theme.titlebar_floating_button_focus_active_hover = recolor(icons_path.."floating_active.png", def.color.cyan)
 
 	theme.titlebar_close_button_normal = recolor(icons_path.."close.png", def.color.bg_1)
-	theme.titlebar_close_button_focus = recolor(icons_path.."close.png", def.color.fg)
-	theme.titlebar_close_button_focus_hover = recolor(icons_path.."close.png", def.color.fg_2)
+	theme.titlebar_close_button_focus = recolor(icons_path.."close.png", def.color.red)
+	theme.titlebar_close_button_focus_hover = recolor(icons_path.."close.png", def.color.yellow)
 
-	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.png", def.color.bg_3)
-	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.png", def.color.fg)
+	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.png", def.color.bg_2)
+	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.png", def.color.bg_4)
 	theme.tag_focus_icon = recolor(icons_path.."tag_sel.png", def.color.fg)
 
-	theme.shutdown_btn = loads(icons_path.."shutdown.png")
-	theme.reboot_btn = loads(icons_path.."reboot.png")
-	theme.logout_btn = loads(icons_path.."logout.png")
+	theme.shutdown_btn = recolor(icons_path.."shutdown.png", def.color.red)
+	theme.reboot_btn = recolor(icons_path.."reboot.png", def.color.yellow)
+	theme.logout_btn = recolor(icons_path.."logout.png", def.color.green)
 
 	theme.notification_spacing = dpi(8)
 

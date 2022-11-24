@@ -5,6 +5,8 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
+Xcursor.theme: phinger-cursors
+Xcursor.size: 32
 Xft.dpi: 96
 
 ! window padding
@@ -18,38 +20,38 @@ st.font:           cherry:size=11
 !!!!!!!!!!!!!!!!!
 
 ! special
-*.background:   #f2f7fa
-*.foreground:   #0f1417
-*.cursorColor:  #e0ddf0
+*.background:   #00040a
+*.foreground:   #e1e9f5
+*.cursorColor:  #e1e9f5
 
 ! black
-*.color0:       #0f1417
-*.color8:       #141b1f
+*.color0:       #050b14
+*.color8:       #0f161f
 
 ! red
-*.color1:       #b83f33
-*.color9:       #bf4539
+*.color1:       #ed6c5f
+*.color9:       #ed6c5f
 
 ! green
-*.color2:       #03a32b
-*.color10:      #07ab30
+*.color2:       #77ed9e
+*.color10:      #77ed9e
 
 ! yellow
-*.color3:       #d19330
-*.color11:      #d99a36
+*.color3:       #ffa866
+*.color11:      #ffa866
 
 ! blue
-*.color4:       #5378c4
-*.color12:      #5a80cc
+*.color4:       #749dfc
+*.color12:      #749dfc
 
 ! magenta
-*.color5:       #7f59b5
-*.color13:      #8760bd
+*.color5:       #f78fe6
+*.color13:      #f78fe6
 
 ! cyan
-*.color6:       #49b0ba
-*.color14:      #4fb8c2
+*.color6:       #68dde8
+*.color14:      #68dde8
 
 ! white
-*.color7:       #e9eff2
-*.color15:      #dfe6eb
+*.color7:       #c5d1e0 
+*.color15:      #d3ddeb

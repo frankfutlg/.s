@@ -5,23 +5,24 @@ local themes_path = gfs.get_configuration_dir().."theme/"
 return { 
 	color = {
 		-- Special
-		bg		= "#f2f7fa",
-		fg		= "#0f1417",
+		bg		= "#00040a",
+		fg		= "#e1e9f5",
 
-		bg_1		= "#e9eff2",
-		bg_2		= "#dfe6eb",
-		bg_3		= "#dadfe3",
+		bg_1		= "#050b14",
+		bg_2		= "#0f161f",
+		bg_3		= "#1f2329",
+		bg_4		= "#2c2f33",
 
-		fg_1		= "#141b1f",
-		fg_2		= "#43494d",
+		fg_1		= "#c5d1e0",
+		fg_2		= "#d3ddeb",
 			
 		-- Colors
-		red		= "#bf4539",
-		green		= "#07ab30",
-		yellow		= "#d99a36",
-		blue		= "#5a80cc",
-		magenta		= "#8760bd",
-		cyan		= "#4fb8c2"
+		red		= "#ed6c5f",
+		green		= "#77ed9e",
+		yellow		= "#ffa866",
+		blue		= "#749dfc",
+		magenta		= "#f78fe6",
+		cyan		= "#68dde8"
 	},
 
 	var = {

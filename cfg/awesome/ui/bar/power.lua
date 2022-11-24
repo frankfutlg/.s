@@ -23,7 +23,7 @@ local powerbtn = wibox.widget {
 			widget = wibox.widget.imagebox
 		},
 
-		margins = dpi(12),
+		margins = dpi(13),
 		widget = wibox.container.margin
 	},
 	

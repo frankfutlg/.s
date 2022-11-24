@@ -17,8 +17,8 @@ local powermenuBox = wibox {
 }
 
 powermenuBox:setup {
-	pbtn { image = beautiful.shutdown_btn, onclick = "sudo /sbin/poweroff" },
-	pbtn { image = beautiful.reboot_btn, onclick = "sudo /sbin/reboot" },
+	pbtn { image = beautiful.shutdown_btn, onclick = "systemctl poweroff" },
+	pbtn { image = beautiful.reboot_btn, onclick = "systemctl reboot" },
 	pbtn { image = beautiful.logout_btn, onclick = "awesome-client command 'awesome.quit()'" },
 	layout = wibox.layout.align.horizontal
 }
