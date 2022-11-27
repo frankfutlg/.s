@@ -20,38 +20,38 @@ st.font:           cherry:size=11
 !!!!!!!!!!!!!!!!!
 
 ! special
-*.background:   #00040a
-*.foreground:   #e1e9f5
-*.cursorColor:  #e1e9f5
+*.background:   #fbfff2
+*.foreground:   #0e1400
+*.cursorColor:  #20241b
 
 ! black
-*.color0:       #050b14
-*.color8:       #0f161f
+*.color0:       #111a0d
+*.color8:       #161a0d
 
 ! red
-*.color1:       #ed6c5f
-*.color9:       #ed6c5f
+*.color1:       #c28667
+*.color9:       #eba886
 
-! green
-*.color2:       #77ed9e
-*.color10:      #77ed9e
+! green                
+*.color2:       #9fbd4d
+*.color10:      #c6e670
 
-! yellow
-*.color3:       #ffa866
-*.color11:      #ffa866
+! yellow               
+*.color3:       #c0c24f
+*.color11:      #eaeb73
 
-! blue
-*.color4:       #749dfc
-*.color12:      #749dfc
+! blue                 
+*.color4:       #9d9fbf
+*.color12:      #c8c8e8
 
-! magenta
-*.color5:       #f78fe6
-*.color13:      #f78fe6
+! magenta              
+*.color5:       #bd9fab
+*.color13:      #e6c8d4
 
-! cyan
-*.color6:       #68dde8
-*.color14:      #68dde8
+! cyan                 
+*.color6:       #7aaacc
+*.color14:      #a2d2f5
 
 ! white
-*.color7:       #c5d1e0 
-*.color15:      #d3ddeb
+*.color7:       #f0f5e6
+*.color15:      #e5ebda

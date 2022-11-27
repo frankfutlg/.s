@@ -29,7 +29,7 @@ local pbutton = function(args)
 
 	btn:connect_signal("mouse::enter", function(self)
 		local btncol = self:get_children_by_id("btn_role")[1]
-		btncol.bg = beautiful.bg_1
+		btncol.bg = beautiful.white200
 	end)
 
 	btn:connect_signal("mouse::leave", function(self)

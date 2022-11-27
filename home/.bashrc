@@ -50,3 +50,11 @@ PS1='[\w] '
 # Path variables
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+# Utilities
+xreloadb () {
+	xrdb -merge "$HOME/.Xresources"
+	kill -USR1 $(pidof st)
+	clear
+	neofetch
+}

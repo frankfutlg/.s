@@ -14,54 +14,74 @@ local theme = {}
 	theme.wallpaper = def.var.wall
 
 	theme.bg = def.color.bg
-	theme.bg_1 = def.color.bg_1
-	theme.bg_2 = def.color.bg_2
-	theme.bg_3 = def.color.bg_3
+	theme.white200 = def.color.white200
+	theme.white400 = def.color.white400
+	theme.white600 = def.color.white600
+	theme.white800 = def.color.white800
+	theme.white1000 = def.color.white1000
+	theme.white1200 = def.color.white1200
+	theme.white1400 = def.color.white1400
 
 	theme.fg = def.color.fg
-	theme.fg_1 = def.color.fg_1
-	theme.fg_2 = def.color.fg_2
+	theme.black200 = def.color.black200
+	theme.black400 = def.color.black400
+	theme.black600 = def.color.black600
+	theme.black800 = def.color.black800
+	
+	theme.red200 = def.color.red200
+	theme.red400 = def.color.red400
+	theme.red600 = def.color.red600
 
-	theme.red = def.color.red
-	theme.green = def.color.green
-	theme.yellow = def.color.yellow
-	theme.blue = def.color.blue
-	theme.magenta = def.color.magenta
-	theme.cyan = def.color.cyan
+	theme.green200 = def.color.green200
+	theme.green400 = def.color.green400
+	theme.green600 = def.color.green600
+
+	theme.yellow200 = def.color.yellow200
+	theme.yellow400 = def.color.yellow400
+	theme.yellow600 = def.color.yellow600
+
+	theme.blue200 = def.color.blue200
+	theme.blue400 = def.color.blue400
+	theme.blue600 = def.color.blue600
+
+	theme.magenta200 = def.color.magenta200
+	theme.magenta400 = def.color.magenta400
+	theme.magenta600 = def.color.magenta600
+
+	theme.cyan200 = def.color.cyan200
+	theme.cyan400 = def.color.cyan400
+	theme.cyan600 = def.color.cyan600
 
 	theme.useless_gap = dpi(8)
 	theme.border_width = dpi(0)
 
-	theme.border_color_normal = def.color.bg_1
-	theme.border_color_active = def.color.bg_1
-	theme.border_color_marked = def.color.bg_1
+	theme.border_color_normal = def.color.white200
+	theme.border_color_active = def.color.white200
+	theme.border_color_marked = def.color.white200
 
-	theme.titlebar_bg_normal = def.color.bg_1
-	theme.titlebar_bg_focus  = def.color.bg_1
+	theme.titlebar_bg_normal = def.color.white200
+	theme.titlebar_bg_focus  = def.color.black600
 
-	theme.titlebar_fg_normal = def.color.bg_1
-	theme.titlebar_fg_focus  = def.color.fg
+	theme.titlebar_floating_button_normal_inactive = recolor(icons_path.."floating_inactive.png", def.color.white200)
+	theme.titlebar_floating_button_focus_inactive  = recolor(icons_path.."floating_inactive.png", def.color.yellow400)
 
-	theme.titlebar_floating_button_normal_inactive = recolor(icons_path.."floating_inactive.png", def.color.bg_1)
-	theme.titlebar_floating_button_focus_inactive  = recolor(icons_path.."floating_inactive.png", def.color.blue)
+	theme.titlebar_floating_button_normal_active = recolor(icons_path.."floating_active.png", def.color.white200)
+	theme.titlebar_floating_button_focus_active  = recolor(icons_path.."floating_active.png", def.color.yellow400)
 
-	theme.titlebar_floating_button_normal_active = recolor(icons_path.."floating_active.png", def.color.bg_1)
-	theme.titlebar_floating_button_focus_active  = recolor(icons_path.."floating_active.png", def.color.blue)
+	theme.titlebar_floating_button_focus_inactive_hover = recolor(icons_path.."floating_inactive.png", def.color.red400)
+	theme.titlebar_floating_button_focus_active_hover = recolor(icons_path.."floating_active.png", def.color.red400)
 
-	theme.titlebar_floating_button_focus_inactive_hover = recolor(icons_path.."floating_inactive.png", def.color.cyan)
-	theme.titlebar_floating_button_focus_active_hover = recolor(icons_path.."floating_active.png", def.color.cyan)
+	theme.titlebar_close_button_normal = recolor(icons_path.."close.png", def.color.white200)
+	theme.titlebar_close_button_focus = recolor(icons_path.."close.png", def.color.green400)
+	theme.titlebar_close_button_focus_hover = recolor(icons_path.."close.png", def.color.yellow400)
 
-	theme.titlebar_close_button_normal = recolor(icons_path.."close.png", def.color.bg_1)
-	theme.titlebar_close_button_focus = recolor(icons_path.."close.png", def.color.red)
-	theme.titlebar_close_button_focus_hover = recolor(icons_path.."close.png", def.color.yellow)
-
-	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.png", def.color.bg_2)
-	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.png", def.color.bg_4)
+	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.png", def.color.white400)
+	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.png", def.color.white1400)
 	theme.tag_focus_icon = recolor(icons_path.."tag_sel.png", def.color.fg)
 
-	theme.shutdown_btn = recolor(icons_path.."shutdown.png", def.color.red)
-	theme.reboot_btn = recolor(icons_path.."reboot.png", def.color.yellow)
-	theme.logout_btn = recolor(icons_path.."logout.png", def.color.green)
+	theme.shutdown_btn = recolor(icons_path.."shutdown.png", def.color.red400)
+	theme.reboot_btn = recolor(icons_path.."reboot.png", def.color.yellow400)
+	theme.logout_btn = recolor(icons_path.."logout.png", def.color.green400)
 
 	theme.notification_spacing = dpi(8)
 

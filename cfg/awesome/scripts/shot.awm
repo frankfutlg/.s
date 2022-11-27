@@ -7,10 +7,10 @@ ACTIVEWINDOW="$(xdotool getactivewindow)"
 notifys() {
 	if [[ -e $FILELOC ]]; then
 		notify-send -i "Screenshot!" "Saved and copied to clipboard."
-		sudo beep -f 500 -l 150
+		beep -f 500 -l 150
 	else
 		notify-send -i "Uh oh..." "Something went wrong."
-		sudo beep -f 375 -l 200
+		beep -f 375 -l 200
 	fi
 }
 
@@ -28,7 +28,7 @@ selection() {
 		notifys
 	else
 		notify-send "Uh oh..." "Something went wrong."
-		sudo beep -f 375 -l 200
+		beep -f 375 -l 200
 	fi
 }
 
