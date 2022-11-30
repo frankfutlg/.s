@@ -8,8 +8,6 @@ export BROWSER="firefox"
 export VISUAL="vim"
 export EDITOR="vim"
 
-export SUDO_PROMPT="passwd: "
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
