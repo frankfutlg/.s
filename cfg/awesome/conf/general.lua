@@ -4,7 +4,7 @@ local gfs = require("gears.filesystem")
 local script_dir = gfs.get_configuration_dir().."scripts/"
 local beautiful = require("beautiful")
 local gears = require("gears")
-local bling = require("mods.bling")
+local bling = require("addons.bling")
 
 -- Default layouts and tags
 screen.connect_signal("request::desktop_decoration", function(s)
