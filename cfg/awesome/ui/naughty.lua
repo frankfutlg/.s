@@ -16,6 +16,7 @@ naughty.connect_signal("request::display", function(n)
 		notification = n,
 		type = "notification",
 		bg = beautiful.bg,
+
 		widget_template = {
 			{
 				{
@@ -27,21 +28,26 @@ naughty.connect_signal("request::display", function(n)
 									forced_height = dpi(30),
 									layout = wibox.layout.align.horizontal
 								},
+
 								left = dpi(10),
 								right = dpi(10),
 								widget = wibox.container.margin
 							},
+
 							bg = beautiful.white200,
 							widget = wibox.container.background
 						},
+
 						strategy = "min",
 						width = dpi(150),
 						widget = wibox.container.constraint
 					},
+
 					strategy = "max",
 					width = dpi(350),
 					widget = wibox.container.constraint
 				},
+
 				{
 					{
 						{
@@ -52,16 +58,20 @@ naughty.connect_signal("request::display", function(n)
 							bottom = dpi(10),
 							widget = wibox.container.margin
 						},
+
 						strategy = "min",
 						height = dpi(42),
 						widget = wibox.container.constraint
 					},
+
 					strategy = "max",
 					width = dpi(350),
 					widget = wibox.container.constraint
 				},
+
 				layout = wibox.layout.align.vertical
 			},	
+
 			id = "background_role",
 			widget = naughty.container.background
 		}

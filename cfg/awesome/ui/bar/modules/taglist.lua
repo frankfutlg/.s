@@ -88,23 +88,32 @@ local get_taglist = function(s)
 	}
 
 	local actualtaglist = wibox.widget {
-		{
+		shape = function(cr, width, height)                                 
+	        	gears.shape.solid_rectangle_shadow(cr, width, height, 4, 4)
+	        end,
+
+		{ 
 			{
-				icon_taglist,
-				right = dpi(4),
-				bottom = dpi(4),
-				widget = wibox.container.margin
+				{
+					icon_taglist,
+					right = dpi(4),
+					bottom = dpi(4),
+					widget = wibox.container.margin
+				},
+
+				halign = "center",
+				valign = "center",
+				widget = wibox.container.place
 			},
 
-			halign = "center",
-			valign = "center",
-			widget = wibox.container.place
+			width = dpi(116),
+			height = dpi(36),                  		
+			strategy = "exact",
+			widget = wibox.container.constraint
 		},
-
-		width = dpi(116),
-		height = dpi(36),                  		
-		strategy = "exact",
-		widget = wibox.container.constraint
+		
+		bg = beautiful.white1600,
+		widget = wibox.container.background
 	}
 
 	return actualtaglist

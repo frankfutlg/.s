@@ -10,7 +10,7 @@ return function(s)
 		screen = s,
 		widget = wibox.container.background,
 		ontop = false,
-		bg = beautiful.white1400,
+		bg = gears.color.transparent,
 		visible = true,
 		placement = function(c) awful.placement.top(c, { margins = dpi(20) }) end,
 		shape = function(cr, width, height)

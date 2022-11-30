@@ -4,7 +4,7 @@ local gfs = require("gears.filesystem")
 local script_dir = gfs.get_configuration_dir().."scripts/"
 local beautiful = require("beautiful")
 local gears = require("gears")
-local bling = require("modules.bling")
+local bling = require("mods.bling")
 
 -- Default layouts and tags
 screen.connect_signal("request::desktop_decoration", function(s)
@@ -53,9 +53,6 @@ gears.timer({
 
 -- Auto focus
 require("awful.autofocus")
-
--- Autostart
-awful.spawn.with_shell(script_dir.."autostart.awm")
 
 -- Window swallowing support (bling)
 bling.module.window_swallowing.start()

@@ -1,5 +1,6 @@
 local awful = require("awful")
 local ruled = require("ruled")
+local gears = require("gears")
 local beautiful = require("beautiful")
 
 -- New clients
@@ -18,9 +19,9 @@ end)
 
 ruled.client.connect_signal("request::rules", function()
 	ruled.client.append_rule {
-			id = "global",
-			rule = { },
-			properties = {
+		id = "global",
+		rule = { },
+		properties = {
 			focus = awful.client.focus.filter,
 			raise = true,
 			screen = awful.screen.preferred,
@@ -29,20 +30,25 @@ ruled.client.connect_signal("request::rules", function()
 	}
 
 	ruled.client.append_rule {
-			id = "floating",
-			rule_any = {
-				name = {
-					"Event Tester",  -- xev.
-				},
+		id = "floating",
+		rule_any = {
+			name = {
+				"Event Tester",  -- xev.
 			},
+		},
 
-		        properties = { floating = true }
+		properties = { floating = true }
 	}
 
  	ruled.client.append_rule { -- Add titlebar for normal and dialog windows
 		id = "titlebars",
 		rule_any = { type = { "normal", "dialog" } },
-		properties = { titlebars_enabled = true }
+		properties =	{ 
+					titlebars_enabled = true,
+					shape = function(cr, width, height)
+						gears.shape.solid_rectangle_shadow(cr, width, height, 6, 6)
+					end
+				}
 	}
 end)
 
