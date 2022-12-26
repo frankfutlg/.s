@@ -15,6 +15,7 @@ return {
 		shot_full = script_dir.."shot.awm -f",
 		shot_area = script_dir.."shot.awm -s",
 		shot_client = script_dir.."shot.awm -w",
+		shot_timed = script_dir.."shot.awm -t",
 
 		git_kcopy = script_dir.."git_kcopy.awm",
 		cclear = script_dir.."clear_clipboard.awm" 

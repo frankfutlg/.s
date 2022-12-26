@@ -1,5 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-xclip -sel c < /dev/null; \
-       	beep -f 450 -l 200; \ 
-	notify-send -u low -t 1250 "Clipboard" "The clipboard has been cleared."
+clearclip() {
+	xclip -sel c < /dev/null
+	[ "$(command -v beep)" ] && beep -f 500 -l 150
+	notify-send -t 1500 "Clipboard" "The clipboard was cleared."
+}
+
+options="$(echo -e "Yes\nNo" | dmenu -g 2 -l 1 -p "Are you sure?")"
+
+case $options in
+	"Yes") clearclip ;;
+	"No") notify-send -t 1500 "The operation was canceled."; exit 1 ;;
+esac

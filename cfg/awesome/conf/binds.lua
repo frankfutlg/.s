@@ -51,6 +51,12 @@ awful.keyboard.append_global_keybindings({
 	),
 	
 	awful.key(
+		{ super, shift }, "Print", function()
+			awful.spawn.with_shell(def.script.shot_timed)
+		end
+	),
+
+	awful.key(
 		{ super, alt }, "g", function()
 			awful.spawn.with_shell(def.script.git_kcopy)
 		end

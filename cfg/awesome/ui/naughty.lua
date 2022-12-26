@@ -34,7 +34,7 @@ naughty.connect_signal("request::display", function(n)
 								widget = wibox.container.margin
 							},
 
-							bg = beautiful.white400,
+							bg = beautiful.white200,
 							widget = wibox.container.background
 						},
 

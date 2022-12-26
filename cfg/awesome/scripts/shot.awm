@@ -7,10 +7,10 @@ ACTIVEWINDOW="$(xdotool getactivewindow)"
 notifys() {
 	if [[ -e $FILELOC ]]; then
 		notify-send "Screenshot!" "Saved and copied to clipboard."
-		beep -f 500 -l 150
+		[ $(command -v beep) ] && beep -f 500 -l 150
 	else
 		notify-send "Uh oh..." "Something went wrong."
-		beep -f 375 -l 200
+		[ $(command -v beep) ] && beep -f 375 -l 200
 	fi
 }
 
@@ -28,7 +28,7 @@ selection() {
 		notifys
 	else
 		notify-send "Uh oh..." "Something went wrong."
-		beep -f 375 -l 200
+		[ $(command -v beep) ] && beep -f 375 -l 200
 	fi
 }
 
@@ -37,9 +37,30 @@ window() {
 	notifys
 }
 
+timed() {
+	local sec
+
+	option="$(echo -e "3s\n5s\n10s\n15s" | dmenu -g 2 -l 2 -p "Select:")"
+	case $option in
+		"3s") sec="3" ;;
+		"5s") sec="5" ;;
+		"10s") sec="10" ;;
+		"15s") sec="15" ;;
+		*) notify-send -t 1500 "Screenshot" "The screenshot was canceled."; exit 1 ;;
+	esac
+
+	for s in $(seq "$sec" -1 1); do
+		notify-send -t 1000 "Timer" "Taking your screenshot in $s..."
+		[ $(command -v beep) ] && beep -f 500 -l 150 & sleep 1
+	done && \
+	maim -u -f png | tee "$FILELOC" | xclip -sel c -t image/png && \
+	notifys
+}
+
 case $1 in
 	-f) full ;;
 	-s) selection ;;
 	-w) window ;;
+	-t) timed ;;
 	*) echo -e "\e[0;31mInvalid option.\e[0m" && exit 1 ;;
 esac

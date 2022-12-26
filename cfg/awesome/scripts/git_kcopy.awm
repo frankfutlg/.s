@@ -1,10 +1,18 @@
 #!/bin/bash
 
-FILE_LOC="$HOME/.git_key"
+copy() {
+	local FILE_LOC="$HOME/.git_key"
+	
+	printf "$(cat $FILE_LOC)" | xclip -sel c && \
+	for s in $(seq "3" -1 1); do
+		notify-send -t 1000 "Your git key was copied!" "Uncopying your git key in $s..."
+		[ $(command -v beep) ] && beep -f 500 -l 150 & sleep 1
+	done && xclip -sel c < /dev/null && notify-send -t 1500 "Your git key was uncopied." "Just for safety measures, you know."
+}
 
-printf "$(cat $FILE_LOC)" | xclip -sel c && \
-for s in $(seq "3" -1 1); do
-	notify-send -u critical -t 1000 "Your git key was copied!" "Uncopying your git key in $s..."
-	beep -f 500 -l 150
-	sleep 1
-done && xclip -sel c < /dev/null && notify-send -u low "Your git key was uncopied." "Just for safety measures, you know."
+options="$(echo -e "Yes\nNo" | dmenu -g 2 -l 1 -p "Are you sure?")"
+
+case $options in
+	"Yes") copy ;;
+	"No") notify-send -t 1500 "The operation was canceled."; exit 1 ;;
+esac
