@@ -11,7 +11,7 @@ local dpi = xresources.apply_dpi
 local powerbtn = wibox.widget {
 	{
 		{
-			image = gears.color.recolor_image(icons_path.."shutdown.png", beautiful.fg),
+			image = beautiful.power_icon,
 			scaling_quality = "nearest",
 			align = "center",
 			valign = "center",
@@ -23,13 +23,13 @@ local powerbtn = wibox.widget {
 	},
 
 	id = "powerbtn_role",
-	bg = beautiful.red400,
+	bg = beautiful.yellow400,
 	widget = wibox.container.background
 }
 
 local poweractualbtn = wibox.widget {
 	shape = function(cr, width, height)                                 
-        	gears.shape.solid_rectangle_shadow(cr, width, height, 4, 4)
+        	gears.shape.solid_rectangle_shadow(cr, width, height, dpi(4), dpi(4))
         end,
 
 	{ 
@@ -48,7 +48,7 @@ local poweractualbtn = wibox.widget {
 	},
 	
 	id = "btnbg_role",
-	bg = beautiful.red200,
+	bg = beautiful.yellow200,
 	widget = wibox.container.background
 }
 
@@ -62,6 +62,8 @@ poweractualbtn:connect_signal("button::press", function(self, _, _, button)
 		btnm.top = dpi(4)
 		btnm.left = dpi(4)
 		btnobg.bg = gears.color.transparent
+
+		awesome.emit_signal("widget::powermenu")
 	end
 end)
 
@@ -73,18 +75,18 @@ poweractualbtn:connect_signal("button::release", function(self, _, _, button)
 		btnm.right = dpi(4)
 		btnm.top = dpi(0)
 		btnm.left = dpi(0)
-		btnobg.bg = beautiful.red200
+		btnobg.bg = beautiful.yellow200
 	end
 end)
 
 powerbtn:connect_signal("mouse::enter", function(self)
 	local btncol = self:get_children_by_id("powerbtn_role")[1]
-	btncol.bg = beautiful.red600
+	btncol.bg = beautiful.yellow600
 end)
 
 powerbtn:connect_signal("mouse::leave", function(self)
 	local btncol = self:get_children_by_id("powerbtn_role")[1]
-	btncol.bg = beautiful.red400
+	btncol.bg = beautiful.yellow400
 end)
 
 return poweractualbtn

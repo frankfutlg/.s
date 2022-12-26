@@ -33,7 +33,7 @@ local actualdate = wibox.widget {
 		widget = wibox.container.constraint
 	},
 
-	bg = beautiful.white1600,
+	bg = beautiful.white1200,
 	widget = wibox.container.background
 }
 

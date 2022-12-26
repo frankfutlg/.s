@@ -15,7 +15,7 @@ naughty.connect_signal("request::display", function(n)
 	naughty.layout.box {
 		notification = n,
 		type = "notification",
-		bg = beautiful.bg,
+		bg = beautiful.white1200,
 
 		widget_template = {
 			{
@@ -34,46 +34,54 @@ naughty.connect_signal("request::display", function(n)
 								widget = wibox.container.margin
 							},
 
-							bg = beautiful.white200,
+							bg = beautiful.white400,
 							widget = wibox.container.background
 						},
 
 						strategy = "min",
-						width = dpi(150),
+						width = dpi(175),
 						widget = wibox.container.constraint
 					},
 
 					strategy = "max",
-					width = dpi(350),
+					width = dpi(400),
 					widget = wibox.container.constraint
 				},
 
 				{
 					{
 						{
-							naughty.widget.message,
-							left = dpi(10),
-							right = dpi(10),
-							top = dpi(10),
-							bottom = dpi(10),
-							widget = wibox.container.margin
+						
+							{
+								naughty.widget.message,
+								left = dpi(10),
+								right = dpi(10),
+								top = dpi(10),
+								bottom = dpi(10),
+								widget = wibox.container.margin
+							},
+	
+							strategy = "min",
+							height = dpi(42),
+							widget = wibox.container.constraint
 						},
 
-						strategy = "min",
-						height = dpi(42),
+						strategy = "max",
+						width = dpi(400),
+						height = dpi(86),
 						widget = wibox.container.constraint
 					},
-
-					strategy = "max",
-					width = dpi(350),
-					widget = wibox.container.constraint
+				
+					bg = beautiful.bg,
+					widget = wibox.container.background
 				},
 
 				layout = wibox.layout.align.vertical
 			},	
 
-			id = "background_role",
-			widget = naughty.container.background
+			right = dpi(4),
+			bottom = dpi(4),
+			widget = wibox.container.margin
 		}
 	}
 end)

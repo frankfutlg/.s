@@ -56,3 +56,11 @@ require("awful.autofocus")
 
 -- Window swallowing support (bling)
 bling.module.window_swallowing.start()
+
+-- Force minimized clients to unminimize.since i don't use that functionality.
+client.connect_signal("property::minimized", function(c)
+	c.minimized = false
+end)
+
+-- Autostart
+awful.spawn.with_shell(script_dir.."autorun.awm")

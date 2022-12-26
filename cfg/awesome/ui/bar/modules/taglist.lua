@@ -89,7 +89,7 @@ local get_taglist = function(s)
 
 	local actualtaglist = wibox.widget {
 		shape = function(cr, width, height)                                 
-	        	gears.shape.solid_rectangle_shadow(cr, width, height, 4, 4)
+	        	gears.shape.solid_rectangle_shadow(cr, width, height, dpi(4), dpi(4))
 	        end,
 
 		{ 
@@ -112,7 +112,7 @@ local get_taglist = function(s)
 			widget = wibox.container.constraint
 		},
 		
-		bg = beautiful.white1600,
+		bg = beautiful.white1200,
 		widget = wibox.container.background
 	}
 

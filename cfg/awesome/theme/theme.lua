@@ -36,50 +36,61 @@ local theme = {}
 	theme.black600 = def.color.black600
 	theme.black800 = def.color.black800
 	
+	theme.red000 = def.color.red000
 	theme.red200 = def.color.red200
-	theme.red300 = def.color.red300
 	theme.red400 = def.color.red400
 	theme.red600 = def.color.red600
 
+	theme.green000 = def.color.green000
 	theme.green200 = def.color.green200
 	theme.green400 = def.color.green400
 	theme.green600 = def.color.green600
 
+	theme.yellow000 = def.color.yellow000
 	theme.yellow200 = def.color.yellow200
 	theme.yellow400 = def.color.yellow400
 	theme.yellow600 = def.color.yellow600
 
+	theme.blue000 = def.color.blue000
 	theme.blue200 = def.color.blue200
 	theme.blue400 = def.color.blue400
 	theme.blue600 = def.color.blue600
 
+	theme.blue000 = def.color.magenta000
 	theme.magenta200 = def.color.magenta200
 	theme.magenta400 = def.color.magenta400
 	theme.magenta600 = def.color.magenta600
 
+	theme.cyan000 = def.color.cyan000
 	theme.cyan200 = def.color.cyan200
 	theme.cyan400 = def.color.cyan400
 	theme.cyan600 = def.color.cyan600
 
-	theme.useless_gap = dpi(8)
+	theme.useless_gap = dpi(10)
 	theme.border_width = dpi(0)
 
-	theme.titlebar_bg_normal = def.color.white1000
-	theme.titlebar_bg_focus  = def.color.white1600
+	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.svg", def.color.white400)
+	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.svg", def.color.white1600)
+	theme.tag_focus_icon = recolor(icons_path.."tag_sel.svg", def.color.black800)
 
-	theme.tag_empty_icon = recolor(icons_path.."tag_unsel.png", def.color.white400)
-	theme.tag_occupied_icon = recolor(icons_path.."tag_unsel.png", def.color.white1600)
-	theme.tag_focus_icon = recolor(icons_path.."tag_sel.png", def.color.black800)
+	theme.vol_full_icon = loads(icons_path.."vol_full.svg")
+	theme.vol_high_icon = loads(icons_path.."vol_high.svg")
+	theme.vol_medium_icon = loads(icons_path.."vol_medium.svg")
+	theme.vol_low_icon = loads(icons_path.."vol_low.svg")
+	theme.vol_vlow_icon = loads(icons_path.."vol_vlow.svg")
+	theme.vol_off_icon = loads(icons_path.."vol_off.svg")
+	theme.vol_mute_icon = loads(icons_path.."vol_full.svg")
 
-	theme.vol_full_icon = recolor(icons_path.."vol_full.png", def.color.black800)
-	theme.vol_high_icon = recolor(icons_path.."vol_high.png", def.color.black800)
-	theme.vol_medium_icon = recolor(icons_path.."vol_medium.png", def.color.black800)
-	theme.vol_low_icon = recolor(icons_path.."vol_low.png", def.color.black800)
-	theme.vol_vlow_icon = recolor(icons_path.."vol_vlow.png", def.color.black800)
-	theme.vol_off_icon = recolor(icons_path.."vol_off.png", def.color.black800)
-	theme.vol_mute_icon = recolor(icons_path.."vol_full.png", def.color.red200)
+	theme.power_icon = loads(icons_path.."power.svg")
+	theme.shutdown_icon = loads(icons_path.."shutdown.svg")
+	theme.restart_icon = loads(icons_path.."restart.svg")
+	theme.logout_icon = loads(icons_path.."logout.svg")
 
-	theme.notification_spacing = dpi(8)
+	theme.notification_spacing = dpi(36)
+	theme.notification_shape =	
+		function(cr, width, height)                                                  				
+			gears.shape.solid_rectangle_shadow(cr, width, height, dpi(4), dpi(4))				
+	        end
 
 	theme.parent_filter_list = {"firefox", "Gimp"}
 	theme.child_filter_list = { "Dragon" } 

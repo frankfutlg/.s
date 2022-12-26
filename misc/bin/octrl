@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function startgm() {
+	doas cpupower frequency-set -g performance
+}
+
+function stopgm() {
+	doas cpupower frequency-set -g schedutil
+}
+
+case $1 in
+	--start) startgm ;;
+	--stop) stopgm ;;
+esac

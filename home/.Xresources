@@ -29,28 +29,28 @@ st.font:           cherry:size=11
 *.color8:       #161a0d
 
 ! red
-*.color1:       #c28667
-*.color9:       #eba886
+*.color1:       #c47d58
+*.color9:       #f7b999
 
 ! green                
-*.color2:       #9fbd4d
-*.color10:      #c6e670
+*.color2:       #98bf1d
+*.color10:      #d6f279
 
 ! yellow               
-*.color3:       #c0c24f
-*.color11:      #eaeb73
+*.color3:       #c4be35
+*.color11:      #faf68e
 
 ! blue                 
-*.color4:       #9d9fbf
-*.color12:      #c8c8e8
+*.color4:       #8181c7
+*.color12:      #d4d4fa
 
 ! magenta              
-*.color5:       #bd9fab
-*.color13:      #e6c8d4
+*.color5:       #c4829b
+*.color13:      #f7d5e2
 
 ! cyan                 
-*.color6:       #7aaacc
-*.color14:      #a2d2f5
+*.color6:       #6ea4cc
+*.color14:      #bde3ff
 
 ! white
 *.color7:       #f0f5e6

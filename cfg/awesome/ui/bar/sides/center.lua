@@ -12,14 +12,15 @@ return function(s)
 		ontop = false,
 		bg = gears.color.transparent,
 		visible = true,
+		type = "dock",
 		placement = function(c) awful.placement.top(c, { margins = dpi(20) }) end,
 		shape = function(cr, width, height)
-			gears.shape.solid_rectangle_shadow(cr, width, height, 4, 4)
+			gears.shape.solid_rectangle_shadow(cr, width, height, dpi(4), dpi(4))
 		end
 	}
 
 	top_center:struts {
-		top = dpi(60)
+		top = dpi(56)
 	}
 
 	top_center:setup {
