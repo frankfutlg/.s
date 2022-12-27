@@ -53,35 +53,34 @@ local volactualbtn = wibox.widget {
 }
 
 awesome.connect_signal("signal::volume", function(volume, muted)
-	if muted == 1 then
-		image = beautiful.vol_mute_icon
+	lltone = beautiful.green600
+	ltone = beautiful.green400
+	dtone = beautiful.green200
+	ddtone = beautiful.green000
+
+	if volume >= 100 then
+		image = beautiful.vol_full_icon
+	elseif volume >= 75 then
+		image = beautiful.vol_high_icon
+	elseif volume >= 50 then
+		image = beautiful.vol_medium_icon
+	elseif volume >= 25 then
+		image = beautiful.vol_low_icon
+	elseif volume >= 1 then
+		image = beautiful.vol_vlow_icon
+	elseif volume == 0 then
+		image = beautiful.vol_off_icon
 		lltone = beautiful.white1200
 		ltone = beautiful.white1400
 		dtone = beautiful.white1600
 		ddtone = beautiful.white1800
-	else
-		lltone = beautiful.green600
-		ltone = beautiful.green400
-		dtone = beautiful.green200
-		ddtone = beautiful.green000
+	end
 
-		if volume >= 100 then
-			image = beautiful.vol_full_icon
-		elseif volume >= 75 then
-			image = beautiful.vol_high_icon
-		elseif volume >= 50 then
-			image = beautiful.vol_medium_icon
-		elseif volume >= 25 then
-			image = beautiful.vol_low_icon
-		elseif volume >= 1 then
-			image = beautiful.vol_vlow_icon
-		elseif volume == 0 then
-			image = beautiful.vol_off_icon
-			lltone = beautiful.white1200
-			ltone = beautiful.white1400
-			dtone = beautiful.white1600
-			ddtone = beautiful.white1800
-		end
+	if muted == 1 then
+		lltone = beautiful.white1600
+		ltone = beautiful.white1800
+		dtone = beautiful.white2000
+		ddtone = beautiful.white2200
 	end
 
 	volicon.image = image
